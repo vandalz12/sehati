@@ -1,0 +1,26 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="winGuestbookInquiry" title="" border="none" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('org.sehati.viewmodel.ShortenedUrlViewModel')">
+	<groupbox mold="3d" closable="false">
+		<grid>
+			<columns>
+				<column width="150px"/>
+				<column/>
+			</columns>
+			<rows>
+				<row>
+					<label value="URL"/>
+					<hbox>
+						<textbox value="@bind(vm.link.originalLink)"/>
+						<button id="btnGenerate" label="Generate" onClick="@command('onGenerate')"/>
+					</hbox>
+				</row>
+				<row>
+					<label value="Shortened Link"/>
+					<a label="@load(vm.link.shortenedLink)" href="@load(vm.link.shortenedLink)" target="_blank"/>
+				</row>
+			</rows>
+		</grid>
+	</groupbox>
+</window>
+</zk>

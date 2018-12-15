@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<system-config>
+        <ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+        <disable-zscript>true</disable-zscript>
+<!--         <disable-event-thread>false</disable-event-thread> -->
+    </system-config>
+    <library-property>
+	    <name>org.zkoss.theme.preferred</name>
+	    <value>sapphire</value>
+	</library-property>
+	<library-property>
+	    <name>org.zkoss.zul.Button.mold</name>
+	    <value>trendy</value>
+	</library-property>
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri>/index.zul</timeout-uri>
+	</device-config>
+</zk>
